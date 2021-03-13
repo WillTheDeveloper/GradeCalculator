@@ -7,6 +7,9 @@
 // This is done for conveniance as referrring to courses as integers
 // would get annoying.
 typedef enum Course {
+	CERTIFICATE,
+	SUBSIDIARY_DIPLOMA,
+	DIPLOMA_90_CREDIT,
     DIPLOMA,
     EXTENDED_DIPLOMA
 } Course;
@@ -16,46 +19,118 @@ typedef enum Course {
 void calculate(Course course, int qcfPoints) {
     std::string output = "You got ";
     std::string grade;
+	int ucasPoints;
     
+	// Assigns grade for CERTIFICATE
+	if (course == CERTIFICATE) {
+        if (260 <= qcfPoints) {
+            grade = "D*";
+			ucasPoints = 28;
+        } else if (250 <= qcfPoints) {
+            grade = "D";
+			ucasPoints = 24;
+        } else if (230 <= qcfPoints) {
+            grade = "M";
+			ucasPoints = 16;
+        } else if (210 <= qcfPoints) {
+            grade = "P";
+			ucasPoints = 8;
+        } 
+	// Assigns grade for SUBSIDIARY DIPLOMA
+	} else if (course == SUBSIDIARY_DIPLOMA) {
+        if (520 <= qcfPoints) {
+            grade = "D*";
+			ucasPoints = 56;
+        } else if (500 <= qcfPoints) {
+            grade = "D";
+			ucasPoints = 48;
+        } else if (460 <= qcfPoints) {
+            grade = "M";
+			ucasPoints = 32;
+        } else if (420 <= qcfPoints) {
+            grade = "P";
+			ucasPoints = 16;
+        }  
+	// Assigns grade for DIPLOMA 90 CREDIT
+	} else if (course == DIPLOMA_90_CREDIT) {
+        if (790 <= qcfPoints) {
+            grade = "D*D*";
+			ucasPoints = 112;
+        } else if (770 <= qcfPoints) {
+            grade = "D*D";
+			ucasPoints = 104;
+        } else if (750 <= qcfPoints) {
+            grade = "DD";
+			ucasPoints = 96;
+        } else if (720 <= qcfPoints) {
+            grade = "DM";
+			ucasPoints = 80;
+        } else if (690 <= qcfPoints) {
+            grade = "MM";
+			ucasPoints = 64;
+        } else if (660 <= qcfPoints) {
+            grade = "MP";
+			ucasPoints = 48;
+        } else if (630 <= qcfPoints) {
+            grade = "PP";
+			ucasPoints = 32;
+        } 
 	// Assigns grade for DIPLOMA
-    if (course == DIPLOMA) {
+    } else if (course == DIPLOMA) {
         if (1060 <= qcfPoints) {
             grade = "D*D*";
+			ucasPoints = 112;
         } else if (1030 <= qcfPoints) {
             grade = "D*D";
+			ucasPoints = 104;
         } else if (1000 <= qcfPoints) {
             grade = "DD";
+			ucasPoints = 96;
         } else if (960 <= qcfPoints) {
             grade = "DM";
+			ucasPoints = 80;
         } else if (920 <= qcfPoints) {
             grade = "MM";
+			ucasPoints = 64;
         } else if (880 <= qcfPoints) {
             grade = "MP";
+			ucasPoints = 48;
         } else if (840 <= qcfPoints) {
             grade = "PP";
+			ucasPoints = 32;
         } 
 	// Assigns grade for EXTENDED DIPLOMA
     } else if (course == EXTENDED_DIPLOMA) {
         if (1590 <= qcfPoints) {
             grade = "D*D*D*";
+			ucasPoints = 168;
         } else if (1560 <= qcfPoints) {
             grade = "D*D*D";
+			ucasPoints = 160;
         } else if (1530 <= qcfPoints) {
             grade = "D*DD";
+			ucasPoints = 152;
         } else if (1500 <= qcfPoints) {
             grade = "DDD";
+			ucasPoints = 144;
         } else if (1460 <= qcfPoints) {
             grade = "DDM";
+			ucasPoints = 128;
         } else if (1420 <= qcfPoints) {
             grade = "DMM";
+			ucasPoints = 112;
         } else if (1380 <= qcfPoints) {
             grade = "MMM";
+			ucasPoints = 96;
         } else if (1340 <= qcfPoints) {
             grade = "MMP";
+			ucasPoints = 80;
         } else if (1300 <= qcfPoints) {
             grade = "MPP";
+			ucasPoints = 64;
         } else if (1260 <= qcfPoints) {
             grade = "PPP";
+			ucasPoints = 48;
         } 
     }
     
@@ -64,11 +139,21 @@ void calculate(Course course, int qcfPoints) {
     ss << qcfPoints;
     std::string qcfPointsString;
     ss >> qcfPointsString;
+	
+	ss.clear();
+
+	// Converts the UCAS points into a string 
+	ss << ucasPoints;
+	std::string ucasPointsString;
+	ss >> ucasPointsString;
 
 	// Appends everything to the output string and prints it
     output += qcfPointsString;
-    output += " QCF Points and a ";
+    output += " QCF Points, a ";
     output += (std::string)grade;
+	output += " and " + ucasPointsString;
+	output += " UCAS points!";
+
     std::cout << output << std::endl;
 }
 
@@ -77,12 +162,15 @@ void calculate(Course course, int qcfPoints) {
 Course getCourse() {
     int input;
     std::cout << "Choose which type of course you are on by inputting the number next to your course type" << std::endl;
-    std::cout << "[0] DIPLOMA" << std::endl;
-    std::cout << "[1] EXTENDED DIPLOMA" << std::endl << std::endl;
+	std::cout << "[1] CERTIFICATE" << std::endl;
+	std::cout << "[2] SUBSIDIARY DIPLOMA" << std::endl;
+	std::cout << "[3] 90 CREDIT DIPLOMA" << std::endl;
+    std::cout << "[4] DIPLOMA" << std::endl;
+    std::cout << "[5] EXTENDED DIPLOMA" << std::endl << std::endl;
     std::cout << "Course Type: ";
     
     std::cin >> input;
-    Course course = (Course)input;
+    Course course = (Course)(input-1);
     return course;
 }
 
@@ -126,8 +214,6 @@ int main()
       } 
   }
   
-  // Calls calcate to get grades from QCF points and Course type
+  // Calls calcate to get grades and UCAS Points from QCF points and Course type
   calculate(userCourse, sum);
-
-  
 }
