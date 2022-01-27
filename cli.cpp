@@ -20,10 +20,37 @@ void calculate(Course course, int qcfPoints) {
     std::string output = "You got ";
     std::string grade;
 	int ucasPoints;
-    
+
 	// Assigns grade for CERTIFICATE
 	if (course == CERTIFICATE) {
-        if (260 <= qcfPoints) {
+
+        switch (qcfPoints) {
+
+            case 260:
+                grade = "D*";
+                ucasPoints = 28;
+                break;
+
+            case 250:
+                grade = "D";
+                ucasPoints = 24;
+                break;
+
+            case 230:
+                grade = "M";
+                ucasPoints = 16;
+                break;
+
+            case 210:
+                grade = "P";
+                ucasPoints = 8;
+
+            default:
+                std::cout << "Please round up your points";
+            }
+        }
+    }
+        /*if (260 <= qcfPoints) {
             grade = "D*";
 			ucasPoints = 28;
         } else if (250 <= qcfPoints) {
@@ -35,8 +62,8 @@ void calculate(Course course, int qcfPoints) {
         } else if (210 <= qcfPoints) {
             grade = "P";
 			ucasPoints = 8;
-        } 
-	// Assigns grade for SUBSIDIARY DIPLOMA
+        } */
+	/*// Assigns grade for SUBSIDIARY DIPLOMA
 	} else if (course == SUBSIDIARY_DIPLOMA) {
         if (520 <= qcfPoints) {
             grade = "D*";
@@ -132,7 +159,7 @@ void calculate(Course course, int qcfPoints) {
             grade = "PPP";
 			ucasPoints = 48;
         } 
-    }
+    }*/
     
 	// Converts the QCF points into a string 
     std::stringstream ss;
