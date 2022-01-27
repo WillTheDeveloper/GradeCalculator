@@ -4,7 +4,7 @@
 #include <sstream>
 
 // This contains all the different courses the user could take.
-// This is done for conveniance as referrring to courses as integers
+// This is done for convenience as referring to courses as integers
 // would get annoying.
 typedef enum Course {
 	CERTIFICATE,
@@ -22,145 +22,166 @@ void calculate(Course course, int qcfPoints) {
 	int ucasPoints;
 
 	// Assigns grade for CERTIFICATE
-	if (course == CERTIFICATE) {
-
-        switch (qcfPoints) {
-
-            case 260:
-                grade = "D*";
-                ucasPoints = 28;
-                break;
-
-            case 250:
-                grade = "D";
-                ucasPoints = 24;
-                break;
-
-            case 230:
-                grade = "M";
-                ucasPoints = 16;
-                break;
-
-            case 210:
-                grade = "P";
-                ucasPoints = 8;
-
-            default:
-                std::cout << "Please round up your points";
+	switch (course) {
+        case CERTIFICATE:
+            switch (qcfPoints) {
+                case 260:
+                    grade = "D*";
+                    ucasPoints = 28;
+                    break;
+                case 250:
+                    grade = "D";
+                    ucasPoints = 24;
+                    break;
+                case 230:
+                    grade = "M";
+                    ucasPoints = 16;
+                    break;
+                case 210:
+                    grade = "P";
+                    ucasPoints = 8;
+                default:
+                    std::cout << "Please round up your points";
             }
-        }
+            break;
+        case SUBSIDIARY_DIPLOMA:
+            switch (qcfPoints) {
+                case 520:
+                    grade = "D*";
+                    ucasPoints = 56;
+                    break;
+                case 500:
+                    grade = "D";
+                    ucasPoints = 48;
+                    break;
+                case 460:
+                    grade = "M";
+                    ucasPoints = 32;
+                    break;
+                case 420:
+                    grade = "P";
+                    ucasPoints = 16;
+                    break;
+                default:
+                    std::cout << "Please round up your points";
+            }
+            break;
+        case DIPLOMA_90_CREDIT:
+            switch (qcfPoints) {
+                case 790:
+                    grade = "D*D*";
+                    ucasPoints = 112;
+                    break;
+                case 770:
+                    grade = "D*D";
+                    ucasPoints = 104;
+                    break;
+                case 750:
+                    grade = "DD";
+                    ucasPoints = 96;
+                    break;
+                case 720:
+                    grade = "DM";
+                    ucasPoints = 80;
+                    break;
+                case 690:
+                    grade = "MM";
+                    ucasPoints = 64;
+                    break;
+                case 660:
+                    grade = "MP";
+                    ucasPoints = 48;
+                    break;
+                case 630:
+                    grade = "PP";
+                    ucasPoints = 32;
+                    break;
+                default:
+                    std::cout << "Please round up your points";
+            }
+            break;
+        case DIPLOMA:
+            switch (qcfPoints) {
+                case 1060:
+                    grade = "D*D*";
+                    ucasPoints = 112;
+                    break;
+                case 1030:
+                    grade = "D*D";
+                    ucasPoints = 104;
+                    break;
+                case 1000:
+                    grade = "DD";
+                    ucasPoints = 96;
+                    break;
+                case 960:
+                    grade = "DM";
+                    ucasPoints = 80;
+                    break;
+                case 920:
+                    grade = "MM";
+                    ucasPoints = 64;
+                    break;
+                case 880:
+                    grade = "MP";
+                    ucasPoints = 48;
+                    break;
+                case 840:
+                    grade = "PP";
+                    ucasPoints = 32;
+                    break;
+                default:
+                    std::cout << "Please round up your points";
+            }
+            break;
+        case EXTENDED_DIPLOMA:
+            switch (qcfPoints) {
+                case 1590:
+                    grade = "D*D*D*";
+                    ucasPoints = 168;
+                    break;
+                case 1560:
+                    grade = "D*D*D";
+                    ucasPoints = 160;
+                    break;
+                case 1530:
+                    grade = "D*DD";
+                    ucasPoints = 152;
+                    break;
+                case 1500:
+                    grade = "DDD";
+                    ucasPoints = 144;
+                    break;
+                case 1460:
+                    grade = "DDM";
+                    ucasPoints = 128;
+                    break;
+                case 1420:
+                    grade = "DMM";
+                    ucasPoints = 112;
+                    break;
+                case 1380:
+                    grade = "MMM";
+                    ucasPoints = 96;
+                    break;
+                case 1340:
+                    grade = "MMP";
+                    ucasPoints = 80;
+                    break;
+                case 1300:
+                    grade = "MPP";
+                    ucasPoints = 64;
+                    break;
+                case 1260:
+                    grade = "PPP";
+                    ucasPoints = 48;
+                    break;
+                default:
+                    std::cout << "Please round up your points";
+            }
+            break;
     }
-        /*if (260 <= qcfPoints) {
-            grade = "D*";
-			ucasPoints = 28;
-        } else if (250 <= qcfPoints) {
-            grade = "D";
-			ucasPoints = 24;
-        } else if (230 <= qcfPoints) {
-            grade = "M";
-			ucasPoints = 16;
-        } else if (210 <= qcfPoints) {
-            grade = "P";
-			ucasPoints = 8;
-        } */
-	/*// Assigns grade for SUBSIDIARY DIPLOMA
-	} else if (course == SUBSIDIARY_DIPLOMA) {
-        if (520 <= qcfPoints) {
-            grade = "D*";
-			ucasPoints = 56;
-        } else if (500 <= qcfPoints) {
-            grade = "D";
-			ucasPoints = 48;
-        } else if (460 <= qcfPoints) {
-            grade = "M";
-			ucasPoints = 32;
-        } else if (420 <= qcfPoints) {
-            grade = "P";
-			ucasPoints = 16;
-        }  
-	// Assigns grade for DIPLOMA 90 CREDIT
-	} else if (course == DIPLOMA_90_CREDIT) {
-        if (790 <= qcfPoints) {
-            grade = "D*D*";
-			ucasPoints = 112;
-        } else if (770 <= qcfPoints) {
-            grade = "D*D";
-			ucasPoints = 104;
-        } else if (750 <= qcfPoints) {
-            grade = "DD";
-			ucasPoints = 96;
-        } else if (720 <= qcfPoints) {
-            grade = "DM";
-			ucasPoints = 80;
-        } else if (690 <= qcfPoints) {
-            grade = "MM";
-			ucasPoints = 64;
-        } else if (660 <= qcfPoints) {
-            grade = "MP";
-			ucasPoints = 48;
-        } else if (630 <= qcfPoints) {
-            grade = "PP";
-			ucasPoints = 32;
-        } 
-	// Assigns grade for DIPLOMA
-    } else if (course == DIPLOMA) {
-        if (1060 <= qcfPoints) {
-            grade = "D*D*";
-			ucasPoints = 112;
-        } else if (1030 <= qcfPoints) {
-            grade = "D*D";
-			ucasPoints = 104;
-        } else if (1000 <= qcfPoints) {
-            grade = "DD";
-			ucasPoints = 96;
-        } else if (960 <= qcfPoints) {
-            grade = "DM";
-			ucasPoints = 80;
-        } else if (920 <= qcfPoints) {
-            grade = "MM";
-			ucasPoints = 64;
-        } else if (880 <= qcfPoints) {
-            grade = "MP";
-			ucasPoints = 48;
-        } else if (840 <= qcfPoints) {
-            grade = "PP";
-			ucasPoints = 32;
-        } 
-	// Assigns grade for EXTENDED DIPLOMA
-    } else if (course == EXTENDED_DIPLOMA) {
-        if (1590 <= qcfPoints) {
-            grade = "D*D*D*";
-			ucasPoints = 168;
-        } else if (1560 <= qcfPoints) {
-            grade = "D*D*D";
-			ucasPoints = 160;
-        } else if (1530 <= qcfPoints) {
-            grade = "D*DD";
-			ucasPoints = 152;
-        } else if (1500 <= qcfPoints) {
-            grade = "DDD";
-			ucasPoints = 144;
-        } else if (1460 <= qcfPoints) {
-            grade = "DDM";
-			ucasPoints = 128;
-        } else if (1420 <= qcfPoints) {
-            grade = "DMM";
-			ucasPoints = 112;
-        } else if (1380 <= qcfPoints) {
-            grade = "MMM";
-			ucasPoints = 96;
-        } else if (1340 <= qcfPoints) {
-            grade = "MMP";
-			ucasPoints = 80;
-        } else if (1300 <= qcfPoints) {
-            grade = "MPP";
-			ucasPoints = 64;
-        } else if (1260 <= qcfPoints) {
-            grade = "PPP";
-			ucasPoints = 48;
-        } 
-    }*/
-    
+
 	// Converts the QCF points into a string 
     std::stringstream ss;
     ss << qcfPoints;
@@ -241,6 +262,6 @@ int main()
       } 
   }
   
-  // Calls calcate to get grades and UCAS Points from QCF points and Course type
+  // Calls calculate to get grades and UCAS Points from QCF points and Course type
   calculate(userCourse, sum);
 }
