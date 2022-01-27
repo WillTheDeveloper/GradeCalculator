@@ -170,7 +170,7 @@ Course getCourse() {
     std::cout << "Course Type: ";
     
     std::cin >> input;
-    Course course = (Course)(input-1);
+    auto course = (Course)(input-1);
     return course;
 }
 
