@@ -80,3 +80,51 @@ int ALevelNineUnitAward(std::string pts)
         return -1;
     }
 }
+
+int ALevelDoubleAward(std::string pts)
+{
+    if (pts == "A*A")
+    {
+        return 112;
+    }
+    else if (pts == "AA")
+    {
+        return 104;
+    }
+    else if (pts == "AB")
+    {
+        return 96;
+    }
+    else if (pts == "BB")
+    {
+        return 80;
+    }
+    else if (pts == "BC")
+    {
+        return 72;
+    }
+    else if (pts == "CC")
+    {
+        return 64;
+    }
+    else if (pts == "CD")
+    {
+        return 56;
+    }
+    else if (pts == "DD")
+    {
+        return 48;
+    }
+    else if (pts == "DE")
+    {
+        return 40;
+    }
+    else if (pts == "EE")
+    {
+        return 32;
+    }
+    else
+    {
+        return -1;
+    }
+}
