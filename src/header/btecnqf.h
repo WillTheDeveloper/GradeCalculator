@@ -1,6 +1,8 @@
 #ifndef BTEC_NQF
 #define BTEC_NQF
 #include <string>
+#include <iostream>
+#include <ctime>
 
 /* BTEC National (NQF) qualification library
  *
@@ -16,6 +18,9 @@ namespace BTECNationalNQF {
     int NationalCertificate(char grade);
     // Valid grades: DDD, DDM, DMM, MMM, MMP, MPP, PPP (= 144, 128, 112, 96, 80, 64, 48, 32)
     int NationalDiploma(char grade);
+
+
+    void Test();
 }
 
 
