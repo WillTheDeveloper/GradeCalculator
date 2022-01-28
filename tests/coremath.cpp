@@ -1,4 +1,1 @@
-//
-// Created by will on 28/01/2022.
-//
-
+#include "../src/header/coremaths.h"
