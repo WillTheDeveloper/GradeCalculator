@@ -1,33 +1,11 @@
-# Note: CMake support is community-based. The maintainers do not use CMake
-# internally.
+# 'Google_test' is the subproject name
+project(Google_tests)
 
-cmake_minimum_required(VERSION 3.5)
+# 'lib' is the folder with Google Test sources
+add_subdirectory(lib)
+include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
-if (POLICY CMP0048)
-  cmake_policy(SET CMP0048 NEW)
-endif (POLICY CMP0048)
-
-project(googletest-distribution)
-set(GOOGLETEST_VERSION 1.11.0)
-
-if(NOT CYGWIN AND NOT MSYS AND NOT ${CMAKE_SYSTEM_NAME} STREQUAL QNX)
-  set(CMAKE_CXX_EXTENSIONS OFF)
-endif()
-
-enable_testing()
-
-include(CMakeDependentOption)
-include(GNUInstallDirs)
-
-#Note that googlemock target already builds googletest
-option(BUILD_GMOCK "Builds the googlemock subproject" ON)
-option(INSTALL_GTEST "Enable installation of googletest. (Projects embedding googletest may want to turn this OFF.)" ON)
-
-if(BUILD_GMOCK)
-  add_subdirectory( googlemock )
-else()
-  add_subdirectory( googletest )
-endif()
-
-add_executable(Google_Tests_run ../accesstohe.cpp )
+# 'Google_Tests_run' is the target name
+# 'test1.cpp tests2.cpp' are source files with tests
+add_executable(Google_Tests_run test1.cpp tests2.cpp)
 target_link_libraries(Google_Tests_run gtest gtest_main)
