@@ -10,9 +10,12 @@
  */
 
 namespace BTECNationalNQF {
-    int NationalAward(std::string grade);
-    int NationalCertificate(std::string grade);
-    int NationalDiploma(std::string grade);
+    // Valid grades: D, M, P (= 48, 32, 32)
+    int NationalAward(char grade);
+    // Valid grades: DD, DM, MM, MP, PP (= 96, 80, 64, 48, 32)
+    int NationalCertificate(char grade);
+    // Valid grades: DDD, DDM, DMM, MMM, MMP, MPP, PPP (= 144, 128, 112, 96, 80, 64, 48, 32)
+    int NationalDiploma(char grade);
 }
 
 
