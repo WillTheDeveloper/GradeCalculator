@@ -5,8 +5,8 @@
  *
  * On Exception/Error, the function will return a -1 (int).
  *
- * All of the core math certificates calculate to the same points per grade.
- * So only use CoreMathUCASGrade() to calculate for Core NMths.
+ * All the core math certificates calculate to the same points per grade.
+ * So only use CoreMathUCASGrade() to calculate for Core Maths.
  */
 
 namespace CoreMaths {
