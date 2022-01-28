@@ -156,3 +156,47 @@ int ASLevel(std::string pts)
         return -1;
     }
 }
+
+int ASLevelDoubleAward(std::string pts)
+{
+    if (pts == "AA")
+    {
+        return 40;
+    }
+    else if (pts == "AB")
+    {
+        return 36;
+    }
+    else if (pts == "BB")
+    {
+        return 32;
+    }
+    else if (pts == "BC")
+    {
+        return 28;
+    }
+    else if (pts == "CC")
+    {
+        return 24;
+    }
+    else if (pts == "CD")
+    {
+        return 22;
+    }
+    else if (pts == "DD")
+    {
+        return 20;
+    }
+    else if (pts == "DE")
+    {
+        return 16;
+    }
+    else if (pts == "EE")
+    {
+        return 12;
+    }
+    else
+    {
+        return -1;
+    }
+}
