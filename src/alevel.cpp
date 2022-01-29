@@ -1,4 +1,5 @@
 #include "string"
+#include <iostream>
 #include "../header/alevel.h"
 
 using namespace ALevelNS;
