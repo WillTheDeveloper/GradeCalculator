@@ -46,4 +46,6 @@ void RunTests()
     TestALevelNineUnitAward("A*A", 76);
     TestALevelNineUnitAward("AA", 68);
     TestALevelNineUnitAward("AB", 64);
+    TestALevelNineUnitAward("BB", 56);
+    TestALevelNineUnitAward("BC", 52);
 }
