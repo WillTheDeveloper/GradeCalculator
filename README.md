@@ -25,15 +25,3 @@ Open source tool for students and teachers to use to calculate all the different
 
 **This table is purely for reference**
 
-### Standard A Levels
-
-| Grade  | Points  |
-|--------|---------|
-| A*     | 56      |
-| A      | 48      |
-| B      | 40      |
-| C      | 32      |
-| D      | 24      |
-| E      | 16      |
-
-### A Level (9 Unit Award)
