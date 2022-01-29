@@ -5,7 +5,6 @@
 using namespace ALevelNS;
 
 // Definition of methods that are located below main().
-void Grade();
 void SelectedALevel();
 
 int main()
@@ -62,7 +61,7 @@ void SelectedALevel()
         case 1:
             std::string pts;
             pts = Grades();
-            ALevelNS::ALevel(pts);
+            ALevel(pts);
             break;
     }
 }
