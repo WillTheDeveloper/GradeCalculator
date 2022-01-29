@@ -33,7 +33,7 @@ void TestALevelDoubleAward(std::string value, int expects)
     Equals(result, expects);
 }
 
-int main()
+int RunTests()
 {
     TestALevel("A*", 56);
     TestALevel("A", 48);

@@ -1,6 +1,8 @@
 #include "string"
 #include "../header/alevel.h"
 
+using namespace ALevel;
+
 int ALevel(std::string pts)
 {
     if (pts == "A*")
