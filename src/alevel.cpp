@@ -1,7 +1,7 @@
 #include "string"
 #include "../header/alevel.h"
 
-using namespace ALevel;
+using namespace ALevelNS;
 
 int ALevel(std::string pts)
 {

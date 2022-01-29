@@ -1,4 +1,3 @@
-#include "main.h"
 #include <iostream>
 #include <string>
 #include "src/header/alevel.h"
@@ -59,8 +58,9 @@ void SelectedALevel()
 
     switch (selection) {
         case 1:
-            std::string v = Grades();
-            ALevel(v);
+            std::string pts;
+            pts = Grades();
+            ALevelNS::ALevel(pts);
             break;
     }
 }
