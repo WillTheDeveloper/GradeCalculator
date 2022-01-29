@@ -15,19 +15,35 @@ void Equals(int result, int expected)
     }
 }
 
-void Test(std::string value, int expects)
+void TestALevel(std::string value, int expects)
 {
     int result = ALevel(value);
-    Equals(result, expects)
+    Equals(result, expects);
+}
+
+void TestALevelNineUnitAward(std::string value, int expects)
+{
+    int result = ALevelNineUnitAward(value);
+    Equals(result, expects);
+}
+
+void TestALevelDoubleAward(std::string value, int expects)
+{
+    int result = ALevelDoubleAward(value);
+    Equals(result, expects);
 }
 
 void RunTests()
 {
-    Test("A*", 56);
-    Test("A", 48);
-    Test("B", 40);
-    Test("C", 32);
-    Test("D", 24);
-    Test("E", 16);
-    Test("Z", -1);
+    TestALevel("A*", 56);
+    TestALevel("A", 48);
+    TestALevel("B", 40);
+    TestALevel("C", 32);
+    TestALevel("D", 24);
+    TestALevel("E", 16);
+    TestALevel("Z", -1);
+
+    TestALevelNineUnitAward("A*A", 76);
+    TestALevelNineUnitAward("AA", 68);
+    TestALevelNineUnitAward("AB", 64);
 }
