@@ -1,0 +1,8 @@
+//
+// Created by will on 29/01/2022.
+//
+
+#ifndef UCASGRADECALCULATOR_MAIN_H
+#define UCASGRADECALCULATOR_MAIN_H
+
+#endif //UCASGRADECALCULATOR_MAIN_H
