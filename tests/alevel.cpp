@@ -18,7 +18,8 @@ bool TestALevel()
     if (value == expects)
     {
         return true
-    } else
+    }
+    else
     {
         return false
     }
