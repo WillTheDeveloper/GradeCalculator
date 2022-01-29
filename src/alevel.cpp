@@ -1,6 +1,8 @@
-#include "header/alevel.h"
 #include "string"
-using namespace ALevel;
+#include <iostream>
+#include "header/alevel.h"
+
+using namespace ALevelNS;
 
 int ALevel(std::string pts)
 {
