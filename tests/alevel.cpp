@@ -6,7 +6,7 @@
 
 using namespace ALevel;
 
-bool TestALevel()
+void TestALevel()
 {
     int expects = 56;
 
@@ -18,11 +18,9 @@ bool TestALevel()
     if (value == expects)
     {
         std::cout << "Result: SUCCESS" << std::endl;
-        return true
     }
     else
     {
         std::cout << "Result: FAILED" << std::endl;
-        return false
     }
 }
