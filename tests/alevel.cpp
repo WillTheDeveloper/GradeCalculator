@@ -1,26 +1,33 @@
-//
-// Created by will on 28/01/2022.
-//
 #include "../src/header/alevel.h"
 #include <iostream>
 
 using namespace ALevel;
 
-void TestALevel()
+void Equals(int result, int expected)
 {
-    int expects = 56;
-
-    std::cout << "Testing" << std::endl;
-    int value = ALevel("A*");
-    std::cout << "Expects: " << expects << std::endl;
-    std::cout << "Actual: " << value;
-
-    if (value == expects)
+    if (result == expected)
     {
-        std::cout << "Result: SUCCESS" << std::endl;
+        std::cout << "SUCCESS"
     }
     else
     {
-        std::cout << "Result: FAILED" << std::endl;
+        std::cout << "FAILED: " << result << " || " << expected << std::endl;
     }
+}
+
+void Test(std::string value, int expects)
+{
+    int result = ALevel(value);
+    Equals(result, expects)
+}
+
+void RunTests()
+{
+    Test("A*", 56);
+    Test("A", 48);
+    Test("B", 40);
+    Test("C", 32);
+    Test("D", 24);
+    Test("E", 16);
+    Test("Z", -1);
 }
