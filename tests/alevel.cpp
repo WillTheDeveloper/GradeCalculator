@@ -7,7 +7,7 @@ void Equals(int result, int expected)
 {
     if (result == expected)
     {
-        std::cout << "SUCCESS"
+        std::cout << "SUCCESS";
     }
     else
     {
@@ -17,23 +17,23 @@ void Equals(int result, int expected)
 
 void TestALevel(std::string value, int expects)
 {
-    int result = ALevel(value);
+    int result = ALevel::ALevel(value);
     Equals(result, expects);
 }
 
 void TestALevelNineUnitAward(std::string value, int expects)
 {
-    int result = ALevelNineUnitAward(value);
+    int result = ALevel::ALevelNineUnitAward(value);
     Equals(result, expects);
 }
 
 void TestALevelDoubleAward(std::string value, int expects)
 {
-    int result = ALevelDoubleAward(value);
+    int result = ALevel::ALevelDoubleAward(value);
     Equals(result, expects);
 }
 
-void RunTests()
+int main()
 {
     TestALevel("A*", 56);
     TestALevel("A", 48);
