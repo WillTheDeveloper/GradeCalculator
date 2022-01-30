@@ -1,11 +1,14 @@
 #include <iostream>
 #include <string>
-#include "src/header/alevel.h"
 
+#include "src/header/alevel.h"
 using namespace ALevelN;
+#include "src/header/btecnqf.h"
+using namespace BTECNationalNQF;
 
 // Definition of methods that are located below main().
 void SelectedALevel();
+void SelectedBTECNQF();
 
 int main()
 {
@@ -31,6 +34,10 @@ int main()
         case 1:
             SelectedALevel();
             break;
+        case 2:
+            SelectedBTECNQF();
+            break;
+
     }
 }
 
@@ -67,7 +74,42 @@ void SelectedALevel()
         case 2: {
             std::string pts;
             pts = Grades();
-            ALevelN::ALevelNineUnitAward(pts);
+            std::cout << ALevelN::ALevelNineUnitAward(pts);
+            break;
+        }
+    }
+}
+
+void SelectedBTECNQF()
+{
+    int selection;
+
+    std::cout << "Which type of BTEC NQF?" << std::endl;
+    std::cout << "[0] Not sure" << std::endl;
+    std::cout << "[1] National Award" << std::endl;
+    std::cout << "[2] National Certificate" << std::endl;
+    std::cout << "[3] National Diploma" << std::endl;
+
+    std::cout << "Enter selection number: ";
+    std::cin >> selection;
+
+    switch (selection) {
+        case 1: {
+            std::string grade;
+            grade = Grades();
+            std::cout << BTECNationalNQF::NationalAward(grade) << std::endl;
+            break;
+        }
+        case 2: {
+            std::string grade;
+            grade = Grades();
+            std::cout << BTECNationalNQF::NationalCertificate(grade) << std::endl;
+            break;
+        }
+        case 3: {
+            std::string grade;
+            grade = Grades();
+            std::cout << BTECNationalNQF::NationalDiploma(grade) << std::endl;
             break;
         }
     }
