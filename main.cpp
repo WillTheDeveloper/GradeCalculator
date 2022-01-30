@@ -36,10 +36,10 @@ int main()
 
 std::string Grades()
 {
-    std::string string; // Create the variable for the input below to be passed to subsequent method.
+    std::string pts; // Create the variable for the input below to be passed to subsequent method.
     std::cout << "What grade did you get? ";
-    std::cin >> string;
-    return string;
+    std::cin >> pts;
+    return pts;
 }
 
 void SelectedALevel()
@@ -58,10 +58,17 @@ void SelectedALevel()
     std::cin >> selection;
 
     switch (selection) {
-        case 1:
-            std::string pts;
-            pts = Grades();
-            ALevel(pts);
+        case 1: {
+            std::string pts1;
+            pts1 = Grades();
+            ALevelNS::ALevel(pts1);
             break;
+        }
+        case 2: {
+            std::string pts2;
+            pts2 = Grades();
+            ALevelNS::ALevelNineUnitAward(pts2);
+            break;
+        }
     }
 }
