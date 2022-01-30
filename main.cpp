@@ -40,6 +40,9 @@ int main()
         case 2:
             SelectedBTECNQF();
             break;
+        case 6:
+            SelectedCoreMaths();
+            break;
 
     }
 }
