@@ -9,7 +9,7 @@
  * On Error, the function will return a -1 (int).
  */
 
-namespace ALevelNS {
+namespace ALevelN {
     // Valid grades: A*, A, B, C, D, E (= 56, 16, 12, 10, 6)
     int ALevel(std::string pts);
 

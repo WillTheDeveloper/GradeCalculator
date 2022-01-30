@@ -2,7 +2,7 @@
 #include <string>
 #include "src/header/alevel.h"
 
-using namespace ALevelNS;
+using namespace ALevelN;
 
 // Definition of methods that are located below main().
 void SelectedALevel();
@@ -36,10 +36,10 @@ int main()
 
 std::string Grades()
 {
-    std::string string; // Create the variable for the input below to be passed to subsequent method.
+    std::string pts; // Create the variable for the input below to be passed to subsequent method.
     std::cout << "What grade did you get? ";
-    std::cin >> string;
-    return string;
+    std::cin >> pts;
+    return pts;
 }
 
 void SelectedALevel()
@@ -58,10 +58,17 @@ void SelectedALevel()
     std::cin >> selection;
 
     switch (selection) {
-        case 1:
+        case 1: {
             std::string pts;
             pts = Grades();
-            ALevel(pts);
+            std::cout << ALevelN::ALevel(pts) << " points." << std::endl;
             break;
+        }
+        case 2: {
+            std::string pts;
+            pts = Grades();
+            ALevelN::ALevelNineUnitAward(pts);
+            break;
+        }
     }
 }

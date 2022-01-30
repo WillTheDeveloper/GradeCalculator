@@ -30,6 +30,7 @@ int NationalDiploma(std::string grade) {
     else { return -1; }
 }
 
+/*
 void Test(const int TEST_COUNT) {
 
     // All the options for each function
@@ -69,4 +70,4 @@ void Test(const int TEST_COUNT) {
     std::cout << "Total NationalDiploma failures: " << failcounter << std::endl;
 
     std::cout << std::endl; // New line after this library has finished testing
-}
+}*/
