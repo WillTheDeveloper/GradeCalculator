@@ -2,8 +2,6 @@
 #include <string>
 #include "src/header/alevel.h"
 
-using namespace ALevelNS;
-
 // Definition of methods that are located below main().
 void SelectedALevel();
 
@@ -59,15 +57,15 @@ void SelectedALevel()
 
     switch (selection) {
         case 1: {
-            std::string pts1;
-            pts1 = Grades();
-            ALevelNS::ALevel(pts1);
+            std::string pts;
+            pts = Grades();
+            ALevelN::ALevel(pts);
             break;
         }
         case 2: {
-            std::string pts2;
-            pts2 = Grades();
-            ALevelNS::ALevelNineUnitAward(pts2);
+            std::string pts;
+            pts = Grades();
+            ALevelN::ALevelNineUnitAward(pts);
             break;
         }
     }

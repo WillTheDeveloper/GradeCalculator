@@ -2,7 +2,7 @@
 #include <iostream>
 #include "header/alevel.h"
 
-using namespace ALevelNS;
+using namespace ALevelN;
 
 int ALevel(std::string pts)
 {
