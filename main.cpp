@@ -74,7 +74,7 @@ void SelectedALevel()
         case 2: {
             std::string pts;
             pts = Grades();
-            std::cout << ALevelN::ALevelNineUnitAward(pts);
+            std::cout << ALevelN::ALevelNineUnitAward(pts) << " points." << std::endl;
             break;
         }
     }
