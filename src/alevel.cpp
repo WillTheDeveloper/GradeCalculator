@@ -4,7 +4,7 @@
 
 using namespace ALevelN;
 
-int ALevel(std::string pts)
+int ALevelN::ALevel(std::string pts)
 {
     if (pts == "A*")
     {
@@ -36,7 +36,7 @@ int ALevel(std::string pts)
     }
 }
 
-int ALevelNineUnitAward(std::string pts)
+int ALevelN::ALevelNineUnitAward(std::string pts)
 {
     if (pts == "A*A")
     {
@@ -84,7 +84,7 @@ int ALevelNineUnitAward(std::string pts)
     }
 }
 
-int ALevelDoubleAward(std::string pts)
+int ALevelN::ALevelDoubleAward(std::string pts)
 {
     if (pts == "A*A")
     {
@@ -132,7 +132,7 @@ int ALevelDoubleAward(std::string pts)
     }
 }
 
-int ASLevel(std::string pts)
+int ALevelN::ASLevel(std::string pts)
 {
     if (pts == "A")
     {
@@ -160,7 +160,7 @@ int ASLevel(std::string pts)
     }
 }
 
-int ASLevelDoubleAward(std::string pts)
+int ALevelN::ASLevelDoubleAward(std::string pts)
 {
     if (pts == "AA")
     {

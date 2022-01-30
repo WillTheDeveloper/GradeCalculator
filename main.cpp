@@ -2,6 +2,8 @@
 #include <string>
 #include "src/header/alevel.h"
 
+using namespace ALevelN;
+
 // Definition of methods that are located below main().
 void SelectedALevel();
 
