@@ -6,6 +6,8 @@
 | M     | 32     |
 | P     | 32     |
 
+*Suspected error above*
+
 # National Certificate
 
 | Grade | Points |
