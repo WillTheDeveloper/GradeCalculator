@@ -1,14 +1,21 @@
 #include "header/btecnqf.h"
-#include "string"s
+#include "string"
 
 using namespace BTECNationalNQF;
 
 int BTECNationalNQF::NationalAward(std::string grade) {
-    switch (grade) {
-        case 'D': return 48;
-        case 'M': return 32;
-        case 'P': return 32;
-        default: return -1;
+    if (grade == "D") {
+        return 48;
+    }
+    else if(grade == "M") {
+        return 32;
+    }
+    else if(grade =="P") {
+        return 32;
+    }
+    else
+    {
+        return -1;
     }
 }
 
