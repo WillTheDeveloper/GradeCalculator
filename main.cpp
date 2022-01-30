@@ -5,10 +5,13 @@
 using namespace ALevelN;
 #include "src/header/btecnqf.h"
 using namespace BTECNationalNQF;
+#include "src/header/coremaths.h"
+using namespace CoreMaths;
 
 // Definition of methods that are located below main().
 void SelectedALevel();
 void SelectedBTECNQF();
+void SelectedCoreMaths();
 
 int main()
 {
@@ -112,5 +115,20 @@ void SelectedBTECNQF()
             std::cout << BTECNationalNQF::NationalDiploma(grade) << std::endl;
             break;
         }
+    }
+}
+
+void SelectedCoreMaths()
+{
+    int selection;
+
+    selection = 1;
+
+    switch (selection) {
+        case 1:
+            std::string pts;
+            pts = Grades();
+            std::cout << CoreMaths::CoreMathsUCASGrade(pts) << std::endl;
+            break;
     }
 }
