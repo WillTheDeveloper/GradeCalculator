@@ -2,13 +2,14 @@
 #define A_LEVEL
 
 #include "string"
+#include <iostream>
 
 /* A Level qualifications library
  *
  * On Error, the function will return a -1 (int).
  */
 
-namespace ALevel {
+namespace ALevelN {
     // Valid grades: A*, A, B, C, D, E (= 56, 16, 12, 10, 6)
     int ALevel(std::string pts);
 
