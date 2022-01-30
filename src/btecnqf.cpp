@@ -1,16 +1,25 @@
 #include "header/btecnqf.h"
+#include "string"
+
 using namespace BTECNationalNQF;
 
-int NationalAward(char grade) {
-    switch (grade) {
-        case 'D': return 48;
-        case 'M': return 32;
-        case 'P': return 32;
-        default: return -1;
+int BTECNationalNQF::NationalAward(std::string grade) {
+    if (grade == "D") {
+        return 48;
+    }
+    else if(grade == "M") {
+        return 32;
+    }
+    else if(grade =="P") {
+        return 32;
+    }
+    else
+    {
+        return -1;
     }
 }
 
-int NationalCertificate(std::string grade) {
+int BTECNationalNQF::NationalCertificate(std::string grade) {
     if (grade == "DD") { return 96; }
     else if (grade == "DM") { return 80; }
     else if (grade == "MM") { return 64; }
@@ -19,7 +28,7 @@ int NationalCertificate(std::string grade) {
     else { return -1;}
 }
 
-int NationalDiploma(std::string grade) {
+int BTECNationalNQF::NationalDiploma(std::string grade) {
     if (grade == "DDD") { return 144; }
     else if (grade == "DDM") { return 128; }
     else if (grade == "DMM") { return 112; }

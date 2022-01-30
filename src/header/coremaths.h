@@ -9,9 +9,12 @@
  * So only use CoreMathUCASGrade() to calculate for Core Maths.
  */
 
+#include "string"
+#include <iostream>
+
 namespace CoreMaths {
     // Valid grades: A, B, C, D, E (= 20, 16, 12, 10, 6)
-    int CoreMathsUCASGrade(char grade);
+    int CoreMathsUCASGrade(std::string pts);
 }
 
 #endif

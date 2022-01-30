@@ -1,11 +1,20 @@
 #include <iostream>
 #include <string>
-#include "src/header/alevel.h"
 
+#include "src/header/alevel.h"
 using namespace ALevelN;
+#include "src/header/btecnqf.h"
+using namespace BTECNationalNQF;
+#include "src/header/coremaths.h"
+using namespace CoreMaths;
+#include "src/header/tlevel.h"
+using namespace TLevel;
 
 // Definition of methods that are located below main().
 void SelectedALevel();
+void SelectedBTECNQF();
+void SelectedCoreMaths();
+void SelectedTLevels();
 
 int main()
 {
@@ -30,6 +39,15 @@ int main()
     switch (selection) {
         case 1:
             SelectedALevel();
+            break;
+        case 2:
+            SelectedBTECNQF();
+            break;
+        case 6:
+            SelectedCoreMaths();
+            break;
+        case 8:
+            SelectedTLevels();
             break;
     }
 }
@@ -67,8 +85,73 @@ void SelectedALevel()
         case 2: {
             std::string pts;
             pts = Grades();
-            ALevelN::ALevelNineUnitAward(pts);
+            std::cout << ALevelN::ALevelNineUnitAward(pts) << " points." << std::endl;
             break;
         }
+    }
+}
+
+void SelectedBTECNQF()
+{
+    int selection;
+
+    std::cout << "Which type of BTEC NQF?" << std::endl;
+    std::cout << "[0] Not sure" << std::endl;
+    std::cout << "[1] National Award" << std::endl;
+    std::cout << "[2] National Certificate" << std::endl;
+    std::cout << "[3] National Diploma" << std::endl;
+
+    std::cout << "Enter selection number: ";
+    std::cin >> selection;
+
+    switch (selection) {
+        case 1: {
+            std::string grade;
+            grade = Grades();
+            std::cout << BTECNationalNQF::NationalAward(grade) << std::endl;
+            break;
+        }
+        case 2: {
+            std::string grade;
+            grade = Grades();
+            std::cout << BTECNationalNQF::NationalCertificate(grade) << std::endl;
+            break;
+        }
+        case 3: {
+            std::string grade;
+            grade = Grades();
+            std::cout << BTECNationalNQF::NationalDiploma(grade) << std::endl;
+            break;
+        }
+    }
+}
+
+void SelectedCoreMaths()
+{
+    int selection;
+
+    selection = 1;
+
+    switch (selection) {
+        case 1:
+            std::string pts;
+            pts = Grades();
+            std::cout << CoreMaths::CoreMathsUCASGrade(pts) << std::endl;
+            break;
+    }
+}
+
+void SelectedTLevels()
+{
+    int selection;
+
+    selection = 1;
+
+    switch (selection) {
+        case 1:
+            std::string grade;
+            grade = Grades();
+            std::cout << TLevel::TLevelUCASGrade(grade) << std::endl;
+            break;
     }
 }
