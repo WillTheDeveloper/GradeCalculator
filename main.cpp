@@ -9,12 +9,18 @@ using namespace BTECNationalNQF;
 using namespace CoreMaths;
 #include "src/header/tlevel.h"
 using namespace TLevel;
+#include "src/header/aqatechnical.h"
+using namespace AQATechnicalN;
+#include "src/header/extendedproject.h"
+using namespace ExtendedProjectN;
 
 // Definition of methods that are located below main().
 void SelectedALevel();
 void SelectedBTECNQF();
 void SelectedCoreMaths();
 void SelectedTLevels();
+void SelectedAQATechnical();
+void SelectedExtendedProject();
 
 int main()
 {
@@ -32,6 +38,8 @@ int main()
     std::cout << "[6] Core maths" << std::endl;
     std::cout << "[7] OCR Cambridge Technical" << std::endl;
     std::cout << "[8] T Levels" << std::endl;
+    std::cout << "[9] AQA Technicals" << std::endl;
+    std::cout << "[10] Extended Project" << std::endl;
 
     std::cout << "Enter selection number: ";
     std::cin >> selection; // Store the number entered by the user.
