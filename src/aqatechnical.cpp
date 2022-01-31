@@ -113,3 +113,37 @@ int L3Technical540(std::string pts)
 }
 
 int L3Technical720(std::string pts)
+{
+    if(pts == "D*D*")
+    {
+
+    }
+    else if(pts == "D*D")
+    {
+
+    }
+    else if(pts == "DD")
+    {
+
+    }
+    else if(pts == "DM")
+    {
+
+    }
+    else if(pts == "MM")
+    {
+        
+    }
+    else if(pts == "MP")
+    {
+
+    }
+    else if(pts == "PP")
+    {
+
+    }
+    else
+    {
+        return -1;
+    }
+}
