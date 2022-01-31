@@ -12,6 +12,8 @@ Open source tool for students and teachers to use to calculate all the different
 - Core maths
 - OCR Cambridge Technical
 - T Levels
+- AQA Technicals
+- Extended Project
 
 ## How to use CLI (wip)
 
