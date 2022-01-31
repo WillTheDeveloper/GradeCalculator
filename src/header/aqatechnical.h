@@ -10,3 +10,5 @@ namespace AQATechnicalN {
     int L3Technical540(std::string pts); // D*D* -> PP
     int L3Technical720(std::string pts); // D*D* -> PP
 }
+
+#endif
