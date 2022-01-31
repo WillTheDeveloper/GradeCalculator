@@ -24,8 +24,10 @@ void SelectedExtendedProject();
 
 int main()
 {
+    std::cout << "=========================================" << std::endl;
     std::cout << "UCAS GRADE CALCULATOR" << std::endl;
     std::cout << "Written by: @WillTheDeveloper and @colsak" << std::endl;
+    std::cout << "=========================================" << std::endl;
 
     int selection; // Create the variable for the selection below.
 
@@ -40,6 +42,8 @@ int main()
     std::cout << "[8] T Levels" << std::endl;
     std::cout << "[9] AQA Technicals" << std::endl;
     std::cout << "[10] Extended Project" << std::endl;
+
+    std::cout << "=========================================" << std::endl;
 
     std::cout << "Enter selection number: ";
     std::cin >> selection; // Store the number entered by the user.
