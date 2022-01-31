@@ -80,31 +80,31 @@ int L3Technical540(std::string pts)
 {
     if(pts == "D*D*")
     {
-
+        return 84;
     }
     else if(pts == "D*D")
     {
-
+        return 78;
     }
     else if(pts == "DD")
     {
-
+        return 72;
     }
     else if(pts == "DM")
     {
-
+        return 60;
     }
     else if(pts == "MM")
     {
-        
+        return 48;
     }
     else if(pts == "MP")
     {
-
+        return 36;
     }
     else if(pts == "PP")
     {
-
+        return 24;
     }
     else
     {
@@ -116,31 +116,31 @@ int L3Technical720(std::string pts)
 {
     if(pts == "D*D*")
     {
-
+        return 112;
     }
     else if(pts == "D*D")
     {
-
+        return 104;
     }
     else if(pts == "DD")
     {
-
+        return 96;
     }
     else if(pts == "DM")
     {
-
+        return 80;
     }
     else if(pts == "MM")
     {
-        
+        return 64;
     }
     else if(pts == "MP")
     {
-
+        return 48;
     }
     else if(pts == "PP")
     {
-
+        return 32;
     }
     else
     {
