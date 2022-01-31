@@ -57,6 +57,12 @@ int main()
         case 8:
             SelectedTLevels();
             break;
+        case 9:
+            SelectedAQATechnical();
+            break;
+        case 10:
+            SelectedExtendedProject();
+            break;
     }
 }
 
@@ -161,5 +167,62 @@ void SelectedTLevels()
             grade = Grades();
             std::cout << TLevel::TLevelUCASGrade(grade) << std::endl;
             break;
+    }
+}
+
+void SelectedAQATechnical()
+{
+    int selection;
+
+    std::cout << "Which type of AQA Technical are you doing?" << std::endl;
+    std::cout << "[1] Level 3 Foundation Technical" << std::endl;
+    std::cout << "[2] Level 3 Technical (1080)" << std::endl;
+    std::cout << "[3] Level 3 Technical (540)" << std::endl;
+    std::cout << "[4] Level 3 Technical (720)" << std::endl;
+
+    std::cout << "Enter selection number: ";
+    std::cin >> selection;
+
+    switch(selection) {
+        case 1: {
+            std::string pts;
+            pts = Grades();
+            std::cout << AQATechnicalN::L3FoundationTechnical(pts) << std::endl;
+            break;
+        }
+        case 2: {
+            std::string pts;
+            pts = Grades();
+            std::cout << AQATechnicalN::L3Technical1080(pts) << std::endl;
+            break;
+        }
+        case 3: {
+            std::string pts;
+            pts = Grades();
+            std::cout << AQATechnicalN::L3Technical540(pts) << std::endl;
+            break;
+        }
+        case 4: {
+            std::string pts;
+            pts = Grades();
+            std::cout << AQATechnicalN::L3Technical720(pts) << std::endl;
+            break;
+        }
+    }
+}
+
+void SelectedExtendedProject()
+{
+    int selection;
+
+    selection = 1;
+
+    switch(selection) {
+        case 1: {
+            std::string pts;
+            pts = Grades();
+            std::cout << ExtendedProjectN::ExtendedProject(pts) << std::endl;
+            break;
+        }
     }
 }
