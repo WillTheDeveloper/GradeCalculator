@@ -6,7 +6,26 @@ using namespace AQATechnicalN;
 
 int L3FoundationTechnical(std::string pts)
 {
+    if(pts == "D*")
+    {
 
+    }
+    else if(pts == "D")
+    {
+
+    }
+    else if(pts == "M")
+    {
+
+    }
+    else if(pts == "P")
+    {
+
+    }
+    else
+    {
+        return -1;
+    }
 }
 
 int L3Technical1080(std::string pts)
