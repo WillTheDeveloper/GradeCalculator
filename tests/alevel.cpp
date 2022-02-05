@@ -1,7 +1,7 @@
 #include "../src/header/alevel.h"
 #include <iostream>
 
-using namespace ALevel;
+using namespace ALevelN;
 
 void Equals(int result, int expected)
 {
