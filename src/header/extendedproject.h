@@ -5,7 +5,7 @@
 #include <iostream>
 
 namespace ExtendedProjectN {
-    int ExtendedProject(std::string pts)
+    int ExtendedProject(std::string pts);
 }
 
 #endif

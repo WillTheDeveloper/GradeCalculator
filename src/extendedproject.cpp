@@ -2,6 +2,8 @@
 #include <iostream>
 #include "string"
 
+using namespace ExtendedProjectN;
+
 int ExtendedProject(std::string pts)
 {
     if (pts == "A*")
