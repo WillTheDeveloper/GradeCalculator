@@ -4,7 +4,7 @@
 
 using namespace ExtendedProjectN;
 
-int ExtendedProject(std::string pts)
+int ExtendedProjectN::ExtendedProject(std::string pts)
 {
     if (pts == "A*")
     {

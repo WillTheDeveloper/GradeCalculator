@@ -1,4 +1,4 @@
-#ifndev EXTENDED_PROJECT
+#ifndef EXTENDED_PROJECT
 #define EXTENDED_PROJECT
 
 #include "string"

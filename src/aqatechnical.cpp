@@ -4,7 +4,7 @@
 
 using namespace AQATechnicalN;
 
-int L3FoundationTechnical(std::string pts)
+int AQATechnicalN::L3FoundationTechnical(std::string pts)
 {
     if(pts == "D*")
     {
@@ -28,7 +28,7 @@ int L3FoundationTechnical(std::string pts)
     }
 }
 
-int L3Technical1080(std::string pts)
+int AQATechnicalN::L3Technical1080(std::string pts)
 {
     if(pts == "D*D*D*")
     {
@@ -76,7 +76,7 @@ int L3Technical1080(std::string pts)
     }
 }
 
-int L3Technical540(std::string pts)
+int AQATechnicalN::L3Technical540(std::string pts)
 {
     if(pts == "D*D*")
     {
@@ -112,7 +112,7 @@ int L3Technical540(std::string pts)
     }
 }
 
-int L3Technical720(std::string pts)
+int AQATechnicalN::L3Technical720(std::string pts)
 {
     if(pts == "D*D*")
     {
