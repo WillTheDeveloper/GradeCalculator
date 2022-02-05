@@ -35,6 +35,7 @@ Open source tool for students and teachers to use to calculate all the different
 
 ## How to use GUI
 
+- **API:** View the public [API repository](https://github.com/WillTheDeveloper/GradesAPI).
 - **Mobile:** Please get our [mobile app](https://github.com/WillTheDeveloper/GradeCalculatorApp).
 - **Web:** *coming soon*
 - **Desktop:** *coming soon*
