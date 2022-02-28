@@ -21,6 +21,3 @@ build_shared_lib:
 
 clean:
 	rm main -f
-
-
-
