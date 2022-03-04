@@ -10,11 +10,11 @@
  */
 
 namespace BTECNationalQCF {
-    int Pearson90Diploma(std::string grade);
-    int PearsonCertificate(std::string grade);
-    int PearsonDiploma(std::string grade);
-    int PearsonExtendedDiploma(std::string grade);
-    int PearsonSubsidiaryDiploma(std::string grade);
+    int Pearson90Diploma(std::string pts);
+    int PearsonCertificate(std::string pts);
+    int PearsonDiploma(std::string pts);
+    int PearsonExtendedDiploma(std::string pts);
+    int PearsonSubsidiaryDiploma(std::string pts);
 }
 
 

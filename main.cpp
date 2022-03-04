@@ -13,14 +13,18 @@ using namespace TLevel;
 using namespace AQATechnicalN;
 #include "src/header/extendedproject.h"
 using namespace ExtendedProjectN;
+#include "src/header/btecqcf.h"
+using namespace BTECNationalQCF;
 
 // Definition of methods that are located below main().
-void SelectedALevel();
-void SelectedBTECNQF();
-void SelectedCoreMaths();
-void SelectedTLevels();
-void SelectedAQATechnical();
-void SelectedExtendedProject();
+void SelectedALevel(); // 1
+void SelectedBTECNQF(); // 2
+void SelectedBTECQCF(); // 3
+//void SelectedBTECRQF(); // 4
+void SelectedCoreMaths(); // 6
+void SelectedTLevels(); // 8
+void SelectedAQATechnical(); // 9
+void SelectedExtendedProject(); // 10
 
 int main()
 {
@@ -32,16 +36,16 @@ int main()
     int selection; // Create the variable for the selection below.
 
     std::cout << "Which qualification type are you doing?" << std::endl;
-    std::cout << "[1] A Levels" << std::endl;
-    std::cout << "[2] BTEC NQF" << std::endl;
+    std::cout << "[1] A Levels" << std::endl; // Done
+    std::cout << "[2] BTEC NQF" << std::endl; // Done
     std::cout << "[3] BTEC QCF" << std::endl;
     std::cout << "[4] BTEC RQF" << std::endl;
     std::cout << "[5] Cambridge PREU" << std::endl;
-    std::cout << "[6] Core maths" << std::endl;
+    std::cout << "[6] Core maths" << std::endl; // Done
     std::cout << "[7] OCR Cambridge Technical" << std::endl;
-    std::cout << "[8] T Levels" << std::endl;
-    std::cout << "[9] AQA Technicals" << std::endl;
-    std::cout << "[10] Extended Project" << std::endl;
+    std::cout << "[8] T Levels" << std::endl; // Done
+    std::cout << "[9] AQA Technicals" << std::endl; // Done
+    std::cout << "[10] Extended Project" << std::endl; // Done
 
     std::cout << "=========================================" << std::endl;
 
@@ -55,6 +59,12 @@ int main()
         case 2:
             SelectedBTECNQF();
             break;
+        case 3:
+            SelectedBTECQCF();
+            break;
+//        case 4:
+//            SelectedBTECRQF();
+//            break;
         case 6:
             SelectedCoreMaths();
             break;
@@ -76,6 +86,56 @@ std::string Grades()
     std::cout << "What grade did you get? ";
     std::cin >> pts;
     return pts;
+}
+
+void SelectedBTECQCF()
+{
+    int selection;
+
+    std::cout << "Which type of BTEC QCF?" << std::endl;
+    std::cout << "NOTE: These are all from Pearson." << std::endl;
+    std::cout << "[0] Not sure" << std::endl;
+    std::cout << "[1] 90-Credit Diploma" << std::endl;
+    std::cout << "[2] Certificate" << std::endl;
+    std::cout << "[3] Diploma" << std::endl;
+    std::cout << "[4] Extended Diploma" << std::endl;
+    std::cout << "[5] Subsidiary Diploma" << std::endl;
+
+    std::cout << "Enter selection number: ";
+    std::cin >> selection;
+
+    switch (selection) {
+        case 1: {
+            std::string pts;
+            pts = Grades();
+            std::cout << BTECNationalQCF::Pearson90Diploma(pts) << " points." << std::endl;
+            break;
+        }
+        case 2: {
+            std::string pts;
+            pts = Grades();
+            std::cout << BTECNationalQCF::PearsonCertificate(pts) << " points." << std::endl;
+            break;
+        }
+        case 3: {
+            std::string pts;
+            pts = Grades();
+            std::cout << BTECNationalQCF::PearsonDiploma(pts) << " points." << std::endl;
+            break;
+        }
+        case 4: {
+            std::string pts;
+            pts = Grades();
+            std::cout << BTECNationalQCF::PearsonExtendedDiploma(pts) << " points." << std::endl;
+            break;
+        }
+        case 5: {
+            std::string pts;
+            pts = Grades();
+            std::cout << BTECNationalQCF::PearsonSubsidiaryDiploma(pts) << " points." << std::endl;
+            break;
+        }
+    }
 }
 
 void SelectedALevel()
