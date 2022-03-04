@@ -1,9 +1,9 @@
-CC = g++
-NAME = main
-SOURCES = $(wildcard src/*.cpp)
-OBK = $(wildcard lib/*.o)
-INCLUDE_DIR = src/header/
-LIB_DIR = lib/
+CC := g++
+NAME := main
+SOURCES := $(wildcard src/*.cpp)
+OBK := $(wildcard lib/*.o)
+INCLUDE_DIR := src/header/
+LIB_DIR := lib/
 
 make: run build clean
 
