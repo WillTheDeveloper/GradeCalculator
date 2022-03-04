@@ -30,4 +30,11 @@ namespace ALevelN {
     int ASLevelDoubleAward(std::string pts);
 }
 
+namespace ALevelTest {
+    int RunTests();
+    int TestALevelDoubleAward(std::string value, int expects);
+    int TestALevelNineUnitAward(std::string value, int expects);
+    int TestALevel(std::string value, int expects);
+}
+
 #endif

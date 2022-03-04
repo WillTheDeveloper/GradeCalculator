@@ -2,8 +2,9 @@
 #include <iostream>
 
 using namespace ALevelN;
+using namespace ALevelTest;
 
-void Equals(int result, int expected)
+void ALevelTest::Equals(int result, int expected)
 {
     if (result == expected)
     {
@@ -15,25 +16,25 @@ void Equals(int result, int expected)
     }
 }
 
-void TestALevel(std::string value, int expects)
+int ALevelTest::TestALevel(std::string value, int expects)
 {
     int result = ALevel::ALevel(value);
     Equals(result, expects);
 }
 
-void TestALevelNineUnitAward(std::string value, int expects)
+int ALevelTest::TestALevelNineUnitAward(std::string value, int expects)
 {
     int result = ALevel::ALevelNineUnitAward(value);
     Equals(result, expects);
 }
 
-void TestALevelDoubleAward(std::string value, int expects)
+int ALevelTest::TestALevelDoubleAward(std::string value, int expects)
 {
     int result = ALevel::ALevelDoubleAward(value);
     Equals(result, expects);
 }
 
-int RunTests()
+int ALevelTest::RunTests()
 {
     TestALevel("A*", 56);
     TestALevel("A", 48);

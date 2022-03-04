@@ -3,6 +3,7 @@
 
 #include "src/header/alevel.h"
 using namespace ALevelN;
+using namespace ALevelTest;
 #include "src/header/btecnqf.h"
 using namespace BTECNationalNQF;
 #include "src/header/coremaths.h"
@@ -25,6 +26,8 @@ void SelectedCoreMaths(); // 6
 void SelectedTLevels(); // 8
 void SelectedAQATechnical(); // 9
 void SelectedExtendedProject(); // 10
+
+void SelectedRunTests();
 
 int main()
 {
@@ -76,6 +79,9 @@ int main()
             break;
         case 10:
             SelectedExtendedProject();
+            break;
+        case 69:
+            SelectedRunTests();
             break;
     }
 }
@@ -289,4 +295,28 @@ void SelectedExtendedProject()
             break;
         }
     }
+}
+
+void SelectedRunTests()
+{
+    int selection;
+
+    std::cout << "What would you like to test?" << std::endl;
+    std::cout << "[0] All" << std::endl;
+    std::cout << "[1] A Levels" << std::endl;
+
+    std::cout << "Enter selection number: ";
+    std::cin >> selection;
+
+    /*switch (selection) {
+        case 0: {
+            std::cout << ALevelTest::RunTests() << std::endl;
+            break;
+        }
+        case 1: {
+            std::cout << ALevelTest::TestALevel() << std::endl;
+            break;
+        }
+
+    }*/
 }
