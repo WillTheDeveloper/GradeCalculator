@@ -1,5 +1,6 @@
 #include "header/btecqcf.h"
 #include "string"
+#include <iostream>
 
 using namespace BTECNationalQCF;
 
@@ -39,6 +40,17 @@ int BTECNationalQCF::Pearson90Diploma(std::string pts)
     }
 }
 
+void BTECNationalQCF::Pearson90DiplomaGrades()
+{
+    std::cout << "1. D*D*" << std::endl;
+    std::cout << "2. D*D" << std::endl;
+    std::cout << "3. DD" << std::endl;
+    std::cout << "4. DM" << std::endl;
+    std::cout << "5. MM" << std::endl;
+    std::cout << "6. MP" << std::endl;
+    std::cout << "7. PP" << std::endl;
+}
+
 int BTECNationalQCF::PearsonCertificate(std::string pts) {
     if (pts == "D*")
     {
@@ -60,6 +72,14 @@ int BTECNationalQCF::PearsonCertificate(std::string pts) {
     {
         return -1;
     }
+}
+
+void BTECNationalQCF::PearsonCertificateGrades()
+{
+    std::cout << "1. D*" << std::endl;
+    std::cout << "2. D" << std::endl;
+    std::cout << "3. M" << std::endl;
+    std::cout << "4. P" << std::endl;
 }
 
 int BTECNationalQCF::PearsonDiploma(std::string pts) {
@@ -95,6 +115,17 @@ int BTECNationalQCF::PearsonDiploma(std::string pts) {
     {
         return -1;
     }
+}
+
+void BTECNationalQCF::PearsonDiplomaGrades()
+{
+    std::cout << "1. D*D*" << std::endl;
+    std::cout << "2. D*D" << std::endl;
+    std::cout << "3. DD" << std::endl;
+    std::cout << "4. DM" << std::endl;
+    std::cout << "5. MM" << std::endl;
+    std::cout << "6. MP" << std::endl;
+    std::cout << "7. PP" << std::endl;
 }
 
 int BTECNationalQCF::PearsonExtendedDiploma(std::string pts) {
@@ -144,6 +175,20 @@ int BTECNationalQCF::PearsonExtendedDiploma(std::string pts) {
     }
 }
 
+void BTECNationalQCF::PearsonExtendedDiplomaGrades()
+{
+    std::cout << "1. D*D*D*" << std::endl;
+    std::cout << "2. D*D*D" << std::endl;
+    std::cout << "3. D*DD" << std::endl;
+    std::cout << "4. DDD" << std::endl;
+    std::cout << "5. DDM" << std::endl;
+    std::cout << "6. DMM" << std::endl;
+    std::cout << "7. MMM" << std::endl;
+    std::cout << "8. MMP" << std::endl;
+    std::cout << "9. MPP" << std::endl;
+    std::cout << "10. PPP" << std::endl;
+}
+
 int BTECNationalQCF::PearsonSubsidiaryDiploma(std::string pts) {
     if (pts == "D*")
     {
@@ -165,4 +210,12 @@ int BTECNationalQCF::PearsonSubsidiaryDiploma(std::string pts) {
     {
         return -1;
     }
+}
+
+void BTECNationalQCF::PearsonSubsidiaryDiplomaGrades()
+{
+    std::cout << "1. D*" << std::endl;
+    std::cout << "2. D" << std::endl;
+    std::cout << "3. M" << std::endl;
+    std::cout << "4. P" << std::endl;
 }

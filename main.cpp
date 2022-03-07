@@ -112,30 +112,35 @@ void SelectedBTECQCF()
 
     switch (selection) {
         case 1: {
+            BTECNationalQCF::Pearson90DiplomaGrades();
             std::string pts;
             pts = Grades();
             std::cout << BTECNationalQCF::Pearson90Diploma(pts) << " points." << std::endl;
             break;
         }
         case 2: {
+            BTECNationalQCF::PearsonCertificateGrades();
             std::string pts;
             pts = Grades();
             std::cout << BTECNationalQCF::PearsonCertificate(pts) << " points." << std::endl;
             break;
         }
         case 3: {
+            BTECNationalQCF::Pearson90DiplomaGrades();
             std::string pts;
             pts = Grades();
             std::cout << BTECNationalQCF::PearsonDiploma(pts) << " points." << std::endl;
             break;
         }
         case 4: {
+            BTECNationalQCF::PearsonExtendedDiplomaGrades()
             std::string pts;
             pts = Grades();
             std::cout << BTECNationalQCF::PearsonExtendedDiploma(pts) << " points." << std::endl;
             break;
         }
         case 5: {
+            BTECNationalQCF::PearsonSubsidiaryDiplomaGrades();
             std::string pts;
             pts = Grades();
             std::cout << BTECNationalQCF::PearsonSubsidiaryDiploma(pts) << " points." << std::endl;
