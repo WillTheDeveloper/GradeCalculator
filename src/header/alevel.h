@@ -28,6 +28,12 @@ namespace ALevelN {
     // Valid grades: AA, AB, BB, BC, CC, CD, DD, DE, EE
     // (= 40, 36, 32, 28, 24, 22, 20, 16, 12
     int ASLevelDoubleAward(std::string pts);
+
+    void ALevelGrades();
+    void ALevelNineUnitAwardGrades();
+    void ALevelDoubleAwardGrades();
+    void ASLevelGrades();
+    void ASLevelDoubleAwardGrades();
 }
 
 namespace ALevelTest {

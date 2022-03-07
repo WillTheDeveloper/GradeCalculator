@@ -161,15 +161,38 @@ void SelectedALevel()
 
     switch (selection) {
         case 1: {
+            ALevelN::ALevelGrades();
             std::string pts;
             pts = Grades();
             std::cout << ALevelN::ALevel(pts) << " points." << std::endl;
             break;
         }
         case 2: {
+            ALevelN::ALevelNineUnitAwardGrades();
             std::string pts;
             pts = Grades();
             std::cout << ALevelN::ALevelNineUnitAward(pts) << " points." << std::endl;
+            break;
+        }
+        case 3: {
+            ALevelN::ALevelDoubleAwardGrades();
+            std::string pts;
+            pts = Grades();
+            std::cout << ALevelN::ALevelDoubleAward(pts) << " points." << std::endl;
+            break;
+        }
+        case 4: {
+            ALevelN::ASLevelGrades();
+            std::string pts;
+            pts = Grades();
+            std::cout << ALevelN::ASLevel(pts) << " points." << std::endl;
+            break;
+        }
+        case 5: {
+            ALevelN::ASLevelDoubleAwardGrades();
+            std::string pts;
+            pts = Grades();
+            std::cout << ALevelN::ASLevelDoubleAward(pts) << " points." << std::endl;
             break;
         }
     }

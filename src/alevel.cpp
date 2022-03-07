@@ -36,6 +36,16 @@ int ALevelN::ALevel(std::string pts)
     }
 }
 
+void ALevelN::ALevelGrades()
+{
+    std::cout << "1. A*" << std::endl;
+    std::cout << "2. A" << std::endl;
+    std::cout << "3. B" << std::endl;
+    std::cout << "4. C" << std::endl;
+    std::cout << "5. D" << std::endl;
+    std::cout << "6. E" << std::endl;
+}
+
 int ALevelN::ALevelNineUnitAward(std::string pts)
 {
     if (pts == "A*A")
@@ -82,6 +92,20 @@ int ALevelN::ALevelNineUnitAward(std::string pts)
     {
         return -1;
     }
+}
+
+void ALevelN::ALevelNineUnitAwardGrades()
+{
+    std::cout << "1. A*A" << std::endl;
+    std::cout << "2. AA" << std::endl;
+    std::cout << "3. AB" << std::endl;
+    std::cout << "4. BB" << std::endl;
+    std::cout << "5. BC" << std::endl;
+    std::cout << "6. CC" << std::endl;
+    std::cout << "7. CD" << std::endl;
+    std::cout << "8. DD" << std::endl;
+    std::cout << "9. DE" << std::endl;
+    std::cout << "10. EE" << std::endl;
 }
 
 int ALevelN::ALevelDoubleAward(std::string pts)
@@ -132,6 +156,20 @@ int ALevelN::ALevelDoubleAward(std::string pts)
     }
 }
 
+void ALevelN::ALevelDoubleAwardGrades()
+{
+    std::cout << "1. A*A" << std::endl;
+    std::cout << "2. AA" << std::endl;
+    std::cout << "3. AB" << std::endl;
+    std::cout << "4. BB" << std::endl;
+    std::cout << "5. BC" << std::endl;
+    std::cout << "6. CC" << std::endl;
+    std::cout << "7. CD" << std::endl;
+    std::cout << "8. DD" << std::endl;
+    std::cout << "9. DE" << std::endl;
+    std::cout << "10. EE" << std::endl;
+}
+
 int ALevelN::ASLevel(std::string pts)
 {
     if (pts == "A")
@@ -158,6 +196,16 @@ int ALevelN::ASLevel(std::string pts)
     {
         return -1;
     }
+}
+
+void ALevelN::ASLevelGrades()
+{
+    std::cout << "1. A*" << std::endl;
+    std::cout << "2. A" << std::endl;
+    std::cout << "3. B" << std::endl;
+    std::cout << "4. C" << std::endl;
+    std::cout << "5. D" << std::endl;
+    std::cout << "6. E" << std::endl;
 }
 
 int ALevelN::ASLevelDoubleAward(std::string pts)
@@ -202,4 +250,17 @@ int ALevelN::ASLevelDoubleAward(std::string pts)
     {
         return -1;
     }
+}
+
+void ALevelN::ASLevelDoubleAwardGrades()
+{
+    std::cout << "1. AA" << std::endl;
+    std::cout << "2. AB" << std::endl;
+    std::cout << "3. BB" << std::endl;
+    std::cout << "4. BC" << std::endl;
+    std::cout << "5. CC" << std::endl;
+    std::cout << "6. CD" << std::endl;
+    std::cout << "7. DD" << std::endl;
+    std::cout << "8. DE" << std::endl;
+    std::cout << "9. EE" << std::endl;
 }
