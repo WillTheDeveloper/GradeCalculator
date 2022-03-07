@@ -133,7 +133,7 @@ void SelectedBTECQCF()
             break;
         }
         case 4: {
-            BTECNationalQCF::PearsonExtendedDiplomaGrades()
+            BTECNationalQCF::PearsonExtendedDiplomaGrades();
             std::string pts;
             pts = Grades();
             std::cout << BTECNationalQCF::PearsonExtendedDiploma(pts) << " points." << std::endl;
