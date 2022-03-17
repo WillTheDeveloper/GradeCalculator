@@ -286,24 +286,28 @@ void SelectedAQATechnical()
 
     switch(selection) {
         case 1: {
+            AQATechnicalN::L3FoundationTechnicalGrades();
             std::string pts;
             pts = Grades();
             std::cout << AQATechnicalN::L3FoundationTechnical(pts) << std::endl;
             break;
         }
         case 2: {
+            AQATechnicalN::L3Technical1080Grades();
             std::string pts;
             pts = Grades();
             std::cout << AQATechnicalN::L3Technical1080(pts) << std::endl;
             break;
         }
         case 3: {
+            AQATechnicalN::L3Technical540Grades();
             std::string pts;
             pts = Grades();
             std::cout << AQATechnicalN::L3Technical540(pts) << std::endl;
             break;
         }
         case 4: {
+            AQATechnicalN::L3Technical720Grades();
             std::string pts;
             pts = Grades();
             std::cout << AQATechnicalN::L3Technical720(pts) << std::endl;

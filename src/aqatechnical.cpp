@@ -28,6 +28,14 @@ int AQATechnicalN::L3FoundationTechnical(std::string pts)
     }
 }
 
+void AQATechnicalN::L3FoundationTechnicalGrades()
+{
+    std::cout << "1. D*" << std::endl;
+    std::cout << "2. D" << std::endl;
+    std::cout << "3. M" << std::endl;
+    std::cout << "4. P" << std::endl;
+}
+
 int AQATechnicalN::L3Technical1080(std::string pts)
 {
     if(pts == "D*D*D*")
@@ -76,6 +84,20 @@ int AQATechnicalN::L3Technical1080(std::string pts)
     }
 }
 
+void AQATechnicalN::L3Technical1080Grades()
+{
+    std::cout << "1. D*D*D*" << std::endl;
+    std::cout << "2. D*D*D" << std::endl;
+    std::cout << "3. D*DD" << std::endl;
+    std::cout << "4. DDD" << std::endl;
+    std::cout << "5. DDM" << std::endl;
+    std::cout << "6. DMM" << std::endl;
+    std::cout << "7. MMM" << std::endl;
+    std::cout << "8. MMP" << std::endl;
+    std::cout << "9. MPP" << std::endl;
+    std::cout << "10. PPP" << std::endl;
+}
+
 int AQATechnicalN::L3Technical540(std::string pts)
 {
     if(pts == "D*D*")
@@ -112,6 +134,17 @@ int AQATechnicalN::L3Technical540(std::string pts)
     }
 }
 
+void AQATechnicalN::L3Technical540Grades()
+{
+    std::cout << "1. D*D*" << std::endl;
+    std::cout << "2. D*D" << std::endl;
+    std::cout << "3. DD" << std::endl;
+    std::cout << "4. DM" << std::endl;
+    std::cout << "5. MM" << std::endl;
+    std::cout << "6. MP" << std::endl;
+    std::cout << "7. PP" << std::endl;
+}
+
 int AQATechnicalN::L3Technical720(std::string pts)
 {
     if(pts == "D*D*")
@@ -146,4 +179,15 @@ int AQATechnicalN::L3Technical720(std::string pts)
     {
         return -1;
     }
+}
+
+void AQATechnicalN::L3Technical720Grades()
+{
+    std::cout << "1. D*D*" << std::endl;
+    std::cout << "2. D*D" << std::endl;
+    std::cout << "3. DD" << std::endl;
+    std::cout << "4. DM" << std::endl;
+    std::cout << "5. MM" << std::endl;
+    std::cout << "6. MP" << std::endl;
+    std::cout << "7. PP" << std::endl;
 }
