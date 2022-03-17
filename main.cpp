@@ -218,18 +218,21 @@ void SelectedBTECNQF()
 
     switch (selection) {
         case 1: {
+            BTECNationalNQF::NationalAwardGrades();
             std::string grade;
             grade = Grades();
             std::cout << BTECNationalNQF::NationalAward(grade) << std::endl;
             break;
         }
         case 2: {
+            BTECNationalNQF::NationalCertificateGrades();
             std::string grade;
             grade = Grades();
             std::cout << BTECNationalNQF::NationalCertificate(grade) << std::endl;
             break;
         }
         case 3: {
+            BTECNationalNQF::NationalDiplomaGrades();
             std::string grade;
             grade = Grades();
             std::cout << BTECNationalNQF::NationalDiploma(grade) << std::endl;

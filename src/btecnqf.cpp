@@ -19,6 +19,13 @@ int BTECNationalNQF::NationalAward(std::string grade) {
     }
 }
 
+void BTECNationalNQF::NationalAwardGrades()
+{
+    std::cout << "1. D" << std::endl;
+    std::cout << "2. M" << std::endl;
+    std::cout << "3. P" << std::endl;
+}
+
 int BTECNationalNQF::NationalCertificate(std::string grade) {
     if (grade == "DD") { return 96; }
     else if (grade == "DM") { return 80; }
@@ -26,6 +33,15 @@ int BTECNationalNQF::NationalCertificate(std::string grade) {
     else if (grade == "MP") { return 48; }
     else if (grade == "PP") { return 32; }
     else { return -1;}
+}
+
+void BTECNationalNQF::NationalCertificateGrades()
+{
+    std::cout << "1. DD" << std::endl;
+    std::cout << "2. DM" << std::endl;
+    std::cout << "3. MM" << std::endl;
+    std::cout << "4. MP" << std::endl;
+    std::cout << "5. PP" << std::endl;
 }
 
 int BTECNationalNQF::NationalDiploma(std::string grade) {
@@ -37,4 +53,15 @@ int BTECNationalNQF::NationalDiploma(std::string grade) {
     else if (grade == "MPP") { return 64; }
     else if (grade == "PPP") { return 48; }
     else { return -1; }
+}
+
+void BTECNationalNQF::NationalDiplomaGrades()
+{
+    std::cout << "1. DMM" << std::endl;
+    std::cout << "2. DDM" << std::endl;
+    std::cout << "3. DMM" << std::endl;
+    std::cout << "4. MMM" << std::endl;
+    std::cout << "5. MMP" << std::endl;
+    std::cout << "6. MPP" << std::endl;
+    std::cout << "7. PPP" << std::endl;
 }
