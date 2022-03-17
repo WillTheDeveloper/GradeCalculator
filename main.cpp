@@ -324,6 +324,7 @@ void SelectedExtendedProject()
 
     switch(selection) {
         case 1: {
+            ExtendedProjectN::ExtendedProjectGrades();
             std::string pts;
             pts = Grades();
             std::cout << ExtendedProjectN::ExtendedProject(pts) << std::endl;

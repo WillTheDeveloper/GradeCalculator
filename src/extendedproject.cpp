@@ -35,3 +35,13 @@ int ExtendedProjectN::ExtendedProject(std::string pts)
         return -1;
     }
 }
+
+void ExtendedProjectN::ExtendedProjectGrades()
+{
+    std::cout << "1. A*" << std::endl;
+    std::cout << "2. A" << std::endl;
+    std::cout << "3. B" << std::endl;
+    std::cout << "4. C" << std::endl;
+    std::cout << "5. D" << std::endl;
+    std::cout << "6. E" << std::endl;
+}

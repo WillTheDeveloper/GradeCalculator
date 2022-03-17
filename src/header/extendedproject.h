@@ -6,6 +6,8 @@
 
 namespace ExtendedProjectN {
     int ExtendedProject(std::string pts);
+
+    void ExtendedProjectGrades();
 }
 
 #endif
