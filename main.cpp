@@ -265,6 +265,7 @@ void SelectedTLevels()
 
     switch (selection) {
         case 1:
+            TLevels::TLevelsGrades();
             std::string grade;
             grade = Grades();
             std::cout << TLevel::TLevelUCASGrade(grade) << std::endl;

@@ -9,3 +9,12 @@ int TLevel::TLevelUCASGrade(std::string grade) {
     else if (grade == "P(L)") { return 96; }
     else { return -1; }
 }
+
+void TLevel::TLevelGrades()
+{
+    std::cout << "A. D*" << std::endl;
+    std::cout << "B. D" << std::endl;
+    std::cout << "C. M" << std::endl;
+    std::cout << "D. P(H)" << std::endl;
+    std::cout << "E. P(L)" << std::endl;
+}

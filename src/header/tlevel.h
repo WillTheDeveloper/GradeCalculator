@@ -15,6 +15,7 @@
 namespace TLevel {
     // Valid grades: D*, D, M, P(H), P(L) (= 168, 144, 120, 96, 72)
     int TLevelUCASGrade(std::string grade);
+    void TLevelGrades();
 }
 
 #endif
