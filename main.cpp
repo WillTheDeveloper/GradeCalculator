@@ -249,6 +249,7 @@ void SelectedCoreMaths()
 
     switch (selection) {
         case 1:
+            CoreMaths::CoreMathsGrades();
             std::string pts;
             pts = Grades();
             std::cout << CoreMaths::CoreMathsUCASGrade(pts) << std::endl;

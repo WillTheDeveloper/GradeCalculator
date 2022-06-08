@@ -15,6 +15,7 @@
 namespace CoreMaths {
     // Valid grades: A, B, C, D, E (= 20, 16, 12, 10, 6)
     int CoreMathsUCASGrade(std::string pts);
+    void CoreMathsGrades();
 }
 
 #endif
