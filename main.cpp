@@ -17,7 +17,6 @@ using namespace ExtendedProjectN;
 #include "src/header/btecqcf.h"
 using namespace BTECNationalQCF;
 
-// Definition of methods that are located below main().
 void SelectedALevel(); // 1
 void SelectedBTECNQF(); // 2
 void SelectedBTECQCF(); // 3
