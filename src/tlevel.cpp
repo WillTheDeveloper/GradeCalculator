@@ -1,4 +1,6 @@
 #include "header/tlevel.h"
+#include "string"
+#include <iostream>
 using namespace TLevel;
 
 int TLevel::TLevelUCASGrade(std::string grade) {

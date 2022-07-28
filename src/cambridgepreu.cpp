@@ -133,3 +133,42 @@ int GPIR(std::string pts)
         return -1;
     }
 }
+
+void PrincipalGrades()
+{
+    std::cout << "1. D1" << std::endl;
+    std::cout << "2. D2" << std::endl;
+    std::cout << "3. D3" << std::endl;
+    std::cout << "4. M1" << std::endl;
+    std::cout << "5. M2" << std::endl;
+    std::cout << "6. M3" << std::endl;
+    std::cout << "7. P1" << std::endl;
+    std::cout << "8. P2" << std::endl;
+    std::cout << "9. P3" << std::endl;
+}
+
+void ShortCourseGrades()
+{
+    std::cout << "1. D1" << std::endl;
+    std::cout << "2. D2" << std::endl;
+    std::cout << "3. D3" << std::endl;
+    std::cout << "4. M1" << std::endl;
+    std::cout << "5. M2" << std::endl;
+    std::cout << "6. M3" << std::endl;
+    std::cout << "7. P1" << std::endl;
+    std::cout << "8. P2" << std::endl;
+    std::cout << "9. P3" << std::endl;
+}
+
+void GPIRGrades()
+{
+    std::cout << "1. D1" << std::endl;
+    std::cout << "2. D2" << std::endl;
+    std::cout << "3. D3" << std::endl;
+    std::cout << "4. M1" << std::endl;
+    std::cout << "5. M2" << std::endl;
+    std::cout << "6. M3" << std::endl;
+    std::cout << "7. P1" << std::endl;
+    std::cout << "8. P2" << std::endl;
+    std::cout << "9. P3" << std::endl;
+}
